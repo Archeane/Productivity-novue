@@ -139,7 +139,7 @@ var WEEK_DATA = {
 
 var TODAY = new Date("2020-01-18"),
     LAST_SEVEN_DAYS = getLastSevenDays(TODAY);
-    //WEEK = getWeekFrame(TODAY);
+    WEEK = getWeekFrame(TODAY);
 
 console.log(`today is ${TODAY}\nlast_seven_days: ${LAST_SEVEN_DAYS} \nweek: ${WEEK}`);
 function init(cb){
@@ -157,4 +157,3 @@ function init(cb){
         });
     });
 }
-    

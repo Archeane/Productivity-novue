@@ -24,11 +24,10 @@
 	"content_scripts":[
 		{
 			"matches":["<all_urls>"],	// run when url matches
-			"js": ["ext/content.js", "jquery-3.1.0.min.js"]		// which js files to execute	
+			"js": ["ext/content.js", "lib/jquery-3.1.0.min.js"]		// which js files to execute	
 		}
 	],
 	"offline_enabled": true,
     "optional_permissions": [ "\u003Call_urls>" ],
     "permissions": [ "tabs", "idle", "storage", "unlimitedStorage", "webRequest", "webRequestBlocking", "https://www.facebook.com/"]
 }
-

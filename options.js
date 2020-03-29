@@ -44,7 +44,6 @@ var validURL = function(str) {
         }
     };
 
-
 $(document).ready(init(()=>{
     $(".content").attr("style", "display: none");
     $(".menu li").on("click", function(){
@@ -66,9 +65,6 @@ $(document).ready(init(()=>{
         options: CHART_OPTIONS
     });
     
-
-
-
     //Block sites
     $('#addBlockSiteForm').on('submit', function(e){
         e.preventDefault();
