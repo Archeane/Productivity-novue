@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Budget Manager</title>
+	<meta charset="utf-8">
+	<!-- End Google Tag Manager -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="bootstrap.min.css">
+	<script type="module" src="jquery-3.1.0.min.js"></script>
+	<script type="module" src="bootstrap.min.js"></script>
+	<script src="Chart.min.js"></script>
+	<!-- <script src="vue.runtime.min.js"></script> -->
+	<script src="progressbar.js"></script>
+	<script src="js/fn.js"></script>
+	
+    <script src=js/config.js></script>
+	<script src="data.js"></script>
+	<link rel="stylesheet" href="options.css" />
+	<script type="module" src="options.js"></script>
+	
+</head>
+<body>
+	
+	
+	<div id="app" class="container">
+		<div id="container">
+		  	<div id="sideMenu">
+				<h1>Sales Report</h1>
+				<ul class="menu">
+					<li class="dashboard">Dashboard</li>
+					<li class="blockSites">Block Sites</li>
+				  	<li class="usageCharts">Usage Charts</li>
+				  	<li class="blockByWords">Block by Words</li>
+				  	<li class="settings">Settings</li>
+				  	<li class="about">About</li>
+				</ul>
+		  	</div>
+
+		  	<div class="content dashboard">
+				<div class="titleBar">
+					<h2>Dashboard</h2>
+					<div>
+						<button class="controls activeControl">Weekly</button>
+						<button class="controls">Monthly</button>
+					</div>
+				</div>
+
+				<div class="mainChart">
+				 	<canvas id="mainChart"></canvas>
+				  	<!-- <h2>Total Sales</h2> -->
+
+					<div class="clearFix"></div>
+					<div id="totalSales" class="row">
+						<div class="col" id="totalUsageProgress">
+							<div id="creditSales" class="progressBar"></div>
+							<h3 id="totalUsageProgressValue">30%</h3><br /> 
+							<span class="progressTitle">Total Usage</span>
+						</div>
+						<div class="col">
+						  <div id="channelSales" class="progressBar"></div>
+						  <h3>$24,834</h3>
+						  <span class="progressTitle">Channel Sales</span>
+						</div>
+						<div class="col">
+						  <div id="directSales" class="progressBar"></div>
+						  <h3>$15,650</h3>
+						  <span class="progressTitle">Direct Sales</span>
+						</div>
+					</div>
+
+				  	<table>
+						<tr>
+						  <th>Top Use Sites</th>
+						  <th>Average Minutes/Day</th>
+						  <th>Total usage this week</th>
+						</tr>
+
+						<tr>
+						  <td>Dallas Oak Dining Chair</td>
+						  <td>20</td>
+						  <td>$1,342</td>
+						</tr>
+
+						<tr>
+						  <td>Benmore Glass Coffee Table</td>
+						  <td>18</td>
+						  <td>$1,550</td>
+						</tr>
+
+						<tr>
+						  <td>Aoraki Leather Sofa</td>
+						  <td>15</td>
+						  <td>$4,170</td>
+						</tr>
+
+						<tr>
+						  <td>Bali Outdoor Wicker Chair</td>
+						  <td>25</td>
+						  <td>$2,974</td>
+						</tr>
+				  	</table>
+				</div>
+
+		  	</div>
+
+		  	<div class="content blockSites">
+		  		<div class="titleBar"><h2>Block Sites</h2></div>
+		  		
+		  		<div id="blockedSites">
+		  			<table id="blockedSitesTable">
+		  				<tr>
+		  					<th>Site</th>
+		  					<th>Allowed time per day</th>
+		  				</tr>
+		  				<tr>
+		  					<td><a href="www.facebook.com">www.facebook.com</a></td>
+		  					<td>10 Mins</td>
+		  					<i class="fa-close deleteBlockedSite"></i>
+		  				<tr>
+		  				<tr>
+		  					<td>www.youtube.com</td>
+		  					<td>1 hour</td>
+		  				<tr>
+		  			</table>
+		  			<div id="addBlockSite" class="center">
+		  				<form id="addBlockSiteForm">
+			  				<input type="text" id="blockSiteName"/><input type="number" min="0" id="blockSiteTime"/> Minutes <br />
+				  			<button type="submit"><i class="fa-plus" />Add Another Site</button>
+				  		</form>
+			  		</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="content usageCharts">
+				<div class="titleBar"><h2>Usage Charts</h2></div>
+			</div>
+
+			<div class="content blockByWords">
+				<div class="titleBar"><h2>BlockByWords</h2></div>
+			</div>
+
+		</div>
+		
+	</div>
+</body>
+</html>
